@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B20E86EB2E6F3B9500D20015 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B20E86EA2E6F3B9500D20015 /* FirebaseAuth */; };
+		B20E86ED2E6F3B9500D20015 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = B20E86EC2E6F3B9500D20015 /* FirebaseCore */; };
+		B20E86EF2E6F3B9500D20015 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B20E86EE2E6F3B9500D20015 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		B20E86432E6F12A700D20015 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +35,22 @@
 		B20E864C2E6F12A800D20015 /* comidaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = comidaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		B20E86AF2E6F1C8100D20015 /* Exceptions for "comida" folder in "comida" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = B20E86342E6F12A500D20015 /* comida */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		B20E86372E6F12A500D20015 /* comida */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				B20E86AF2E6F1C8100D20015 /* Exceptions for "comida" folder in "comida" target */,
+			);
 			path = comida;
 			sourceTree = "<group>";
 		};
@@ -52,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20E86ED2E6F3B9500D20015 /* FirebaseCore in Frameworks */,
+				B20E86EB2E6F3B9500D20015 /* FirebaseAuth in Frameworks */,
+				B20E86EF2E6F3B9500D20015 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +100,7 @@
 				B20E86372E6F12A500D20015 /* comida */,
 				B20E86452E6F12A700D20015 /* comidaTests */,
 				B20E864F2E6F12A800D20015 /* comidaUITests */,
+				B20E86E92E6F3B9500D20015 /* Frameworks */,
 				B20E86362E6F12A500D20015 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +113,13 @@
 				B20E864C2E6F12A800D20015 /* comidaUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B20E86E92E6F3B9500D20015 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +142,9 @@
 			);
 			name = comida;
 			packageProductDependencies = (
+				B20E86EA2E6F3B9500D20015 /* FirebaseAuth */,
+				B20E86EC2E6F3B9500D20015 /* FirebaseCore */,
+				B20E86EE2E6F3B9500D20015 /* FirebaseFirestore */,
 			);
 			productName = comida;
 			productReference = B20E86352E6F12A500D20015 /* comida.app */;
@@ -195,6 +228,9 @@
 			);
 			mainGroup = B20E862C2E6F12A500D20015;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B20E86812E6F1B3A00D20015 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B20E86362E6F12A500D20015 /* Products */;
 			projectDirPath = "";
@@ -397,6 +433,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = comida/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -424,6 +461,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = comida/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +588,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B20E86812E6F1B3A00D20015 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B20E86EA2E6F3B9500D20015 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20E86812E6F1B3A00D20015 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B20E86EC2E6F3B9500D20015 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20E86812E6F1B3A00D20015 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		B20E86EE2E6F3B9500D20015 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20E86812E6F1B3A00D20015 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B20E862D2E6F12A500D20015 /* Project object */;
 }

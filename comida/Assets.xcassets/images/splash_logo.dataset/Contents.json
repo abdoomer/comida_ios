@@ -1,0 +1,12 @@
+{
+  "data" : [
+    {
+      "filename" : "splash_logo.xml",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
